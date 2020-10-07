@@ -1,7 +1,5 @@
 # Data Structures
 
-[![Run on Repl.it](https://repl.it/badge/github/zayazzp/data-structures)](https://repl.it/github/zayazzp/data-structures)
-
 Data Structures are programmatic ways of organizing data in a well defined and structured manner so that they can be proccesses efficiently.
 
 ## Types of DS
