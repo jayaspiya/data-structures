@@ -7,6 +7,8 @@ Data Structures are programmatic ways of organizing data in a well defined and s
 - Linked List
   - Singly Linked List
   - Doubly Linked List
+  - Circular Linked Linked
+- Stack
 
 ## References
 
