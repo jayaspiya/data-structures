@@ -39,8 +39,18 @@ int main(){
 				cout << num << " dequeued" << endl;
 				cout << "Queue size: " << queue.size() << endl;
 				break;
-			case 0:
+			case 3:
+				num = queue.peek();
+				cout << num << " peeked" << endl;
 				break;
+			case 4:
+				num = queue.size();
+				cout << "The size of queue: " << num << endl; 
+			case 0:
+				loop = false;
+				break;
+			default:
+				cout << "Invalid selection" << endl;
 		}
 	}
 }
@@ -79,6 +89,14 @@ int Queue::dequeue(){
 	int dequeue_num = *(base + front);
 	front++;
 	return dequeue_num;
+}
+int Queue::peek(){
+	if (isEmpty()){
+		cout << "Cannot peek. Queue Empty" << endl;
+		return 0;
+	}
+	int peeked_number = *(base + front);
+	return peeked_number;
 }
 bool Queue::isFull(){
 	if (size() >= total_capacity){
