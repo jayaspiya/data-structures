@@ -28,17 +28,42 @@ public:
 };
 void printMenu(){
 	cout << "Menu" << endl;
-	cout << "Add new node" << endl;
+	cout << "1. Add new node" << endl;
+	cout << "2. Print Tree" << endl;
+	cout << "0. Exit" << endl;
 }
 int main(){
 	BinaryTree *binaryTree = new BinaryTree();
-	binaryTree->insert(45);
-	binaryTree->insert(43);
-	binaryTree->insert(65);
-	binaryTree->insert(35);
-	binaryTree->insert(15);
-	binaryTree->insert(20);
-	binaryTree->print2D();
+	bool loop = true;
+	int choice;
+	int number;
+	while(loop){
+		printMenu();
+		cout << "Enter your choice:  ";
+		cin >> choice;
+		switch(choice){
+			case 1:
+				while(true){
+					cout << "Enter number (0 to exit):  ";
+					cin >> number;
+					if(number == 0){
+						break;
+					}
+					binaryTree->insert(number);
+					}
+				break;
+			case 2:
+				cout << "Printing tree in 2D" << endl;
+				binaryTree->print2D();	
+				break;
+			case 0:
+				loop = false;
+				break;
+			default:
+				cout << "Invalid Entry" << endl;
+		}
+		
+	}
 	
 }
 void BinaryTree::insert(int num){
